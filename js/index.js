@@ -28,7 +28,7 @@ const siteContent = {
   },
   "contact": {
     "contact-h4" : "Contact",
-    "address" : "123 Way 45 Street Somewhere, USA",
+    "address" : "123 Way 45 Street\nSomewhere, USA",
     "phone" : "1 (888) 888-8888",
     "email" : "sales@greatidea.io",
   },
@@ -101,6 +101,7 @@ const contactHeader = document.querySelector(".contact h4")
 
 const contactP = document.querySelectorAll('.contact p')
   contactP[0].textContent = siteContent["contact"]["address"]
+  contactP[0].style.whiteSpace = 'pre'
   contactP[1].textContent = siteContent["contact"]["phone"];
   contactP[2].textContent = siteContent["contact"]["email"];
 
