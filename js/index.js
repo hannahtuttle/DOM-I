@@ -76,11 +76,15 @@ const navItems = document.querySelectorAll('nav a')
     a2.textContent = 'a2'
     a2.style.color = 'green'
 
+
     newNav.appendChild(a1);
 
-    newNav.appendChild(a2);
+    newNav.prepend(a2);
 
-
+    navItems.forEach((button) => {
+      button.addEventListener('click', event => {
+        event.target.style.color = 'black'
+      })})
 
 const middleText = document.querySelectorAll(".main-content h4")
   middleText[0].textContent = siteContent['main-content']["features-h4"];
@@ -107,4 +111,6 @@ const contactP = document.querySelectorAll('.contact p')
 
 
 const footer = document.querySelector("footer p")
-  footer.innerText = "Copyright Great Idea! 2018";
+  footer.textContent = "Copyright Great Idea! 2018";
+
+
